@@ -1,0 +1,565 @@
+body {
+	margin: 0px;
+	background-color: ghostwhite;
+	font: 15px 'Verdana';
+	color: grey;
+	padding-top: 62px;
+}
+
+.robots > a,
+.students > a {
+	color: gray;
+	text-decoration: none;
+}
+
+
+/* классы для меню и подвала */
+.top-div {
+	background-color: powderblue;
+	width: 100%;
+	min-height: 60px;
+	border-bottom: 2px solid skyblue;
+	position: fixed;
+	top: 0px;
+}
+
+.top-nav {
+	display: flex;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.top-nav a {
+	color: grey;
+	text-decoration: none;
+}
+
+.main-nav {
+	flex: 1;
+	list-style: none;
+
+	display: flex;
+}
+
+.main-nav li {
+	margin: 0;
+	margin-right: 15px;
+}
+
+.account-nav {
+
+}
+
+.account-nav li {
+	color: #fff;
+}
+
+.button {
+	border-radius: 15px;
+	border-bottom: 4px groove skyblue;
+	border-right: 4px groove skyblue;
+	border-top: 4px ridge skyblue;
+	border-left: 4px ridge skyblue;
+
+	box-shadow: 0 0 20px grey;
+
+	padding: 10px;
+
+	color: grey;
+	text-decoration: none;
+}
+
+.button:hover {
+	border-bottom: 4px ridge skyblue;
+	border-right: 4px ridge skyblue;
+	border-top: 4px groove skyblue;
+	border-left: 4px groove skyblue;
+}
+
+.profile {
+	position: relative;
+	padding-right: 40px;
+}
+
+.profile-name {
+	font-weight: bold;
+	font-size: 1.3em;
+	color: gray;
+}
+
+.profile-img {
+	position: absolute;
+	top: auto;
+	bottom: auto;
+	right: 3px;
+
+	width: 28px;
+	height: 28px;
+
+	border-radius: 50%;
+}
+
+
+.robot-main {
+	margin: 20px;
+	margin-top: 40px;
+	display: flex;
+	flex-direction: row;
+	align-items:: stretch;
+}
+
+.robot-information {
+	background-color: rgba(13%, 29%, 73%, 0.3);
+
+	width: 500px;
+
+	border-bottom: 5px groove rgba(13%, 29%, 73%, 0.3);
+	border-right: 5px groove rgba(13%, 29%, 73%, 0.3);
+	border-top: 5px ridge rgba(13%, 29%, 73%, 0.3);
+	border-left: 5px ridge rgba(13%, 29%, 73%, 0.3);
+	border-radius: 35px;
+	box-shadow: 0 0 20px black;
+	margin-right: 0px;
+	padding: 10px;
+
+
+	display: flex;
+	flex-direction: column;
+}
+
+
+
+
+
+
+.main-page-div {
+	display: inline-block;
+	text-align: center;
+}
+
+
+
+
+
+.bottom-div {
+	background-color: powderblue;
+	width: 100%;
+	height: 60px;
+	border-top: 2px solid skyblue;
+	margin-top: 20px;
+}
+
+
+
+
+
+
+
+h2 {
+	text-align: center;
+}
+
+.information {
+	padding: 10px;
+	width: 1000px;
+	min-height: 20px;
+	background-color: rgba(13%, 29%, 73%, 0.3);
+	border-bottom: 5px groove rgba(13%, 29%, 73%, 0.3);
+	border-right: 5px groove rgba(13%, 29%, 73%, 0.3);
+	border-top: 5px ridge rgba(13%, 29%, 73%, 0.3);
+	border-left: 5px ridge rgba(13%, 29%, 73%, 0.3);
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 20px;
+	border-radius: 30px;
+	box-shadow: 0 0 20px black;
+}
+
+.robots {
+	width: 100%;
+	margin-top: 20px;
+}
+
+.robotinrobots {
+	width: 200px;
+	height: 285px;
+	background-color: rgba(13%, 29%, 73%, 0.3);
+	border-bottom: 5px groove rgba(13%, 29%, 73%, 0.3);
+	border-right: 5px groove rgba(13%, 29%, 73%, 0.3);
+	border-top: 5px ridge rgba(13%, 29%, 73%, 0.3);
+	border-left: 5px ridge rgba(13%, 29%, 73%, 0.3);
+	margin-right: 27px;
+	margin-left: 27px;
+	margin-top: 20px;
+	display: inline-block;
+	border-radius: 10px;
+	box-shadow: 0 0 20px black;
+	vertical-align: middle;
+}
+
+.name-robotinrobots {
+	width: 190px;
+	min-height: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5px;
+
+	text-align: center;
+}
+
+.img-robotinrobots {
+	width: 180px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 10px;
+	box-shadow: 0 0 15px black;
+
+	border-radius: 10px;
+}
+
+
+
+
+
+.reg-input {
+	min-width: 300px;
+	max-width: 300px;
+	padding: 3px;
+	margin-top: 20px;
+	margin-right: auto;
+	margin-left: auto;
+	border-radius: 10px;
+	display: block;
+	background-color: rgba(13%, 29%, 73%, 0.3);
+	border-bottom: 5px groove rgba(13%, 29%, 73%, 0.3);
+	border-right: 5px groove rgba(13%, 29%, 73%, 0.3);
+	border-top: 5px ridge rgba(13%, 29%, 73%, 0.3);
+	border-left: 5px ridge rgba(13%, 29%, 73%, 0.3);
+	box-shadow: 0 0 20px black;
+}
+
+.reg-input:hover {
+	background-color: rgba(13%, 29%, 73%, 0.5);
+	border-bottom: 5px groove rgba(13%, 29%, 73%, 0.5);
+	border-right: 5px groove rgba(13%, 29%, 73%, 0.5);
+	border-top: 5px ridge rgba(13%, 29%, 73%, 0.5);
+	border-left: 5px ridge rgba(13%, 29%, 73%, 0.5);
+}
+
+textarea {
+	min-height: 30px;
+}
+
+h3 {
+	text-align: center;
+	font-size: 25px;
+}
+
+h4 {
+	text-align: center;
+	font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.main-information li {
+	margin: 10px;
+	float: right;
+}
+
+.main-information {
+	margin: 0;
+}
+
+
+
+.information {
+	width: 200px;
+	display: inline-block;
+	background-color: rgba(13%, 29%, 73%, 0.3);
+	border-bottom: 5px groove rgba(13%, 29%, 73%, 0.3);
+	border-right: 5px groove rgba(13%, 29%, 73%, 0.3);
+	border-top: 5px ridge rgba(13%, 29%, 73%, 0.3);
+	border-left: 5px ridge rgba(13%, 29%, 73%, 0.3);
+	border-radius: 35px;
+	box-shadow: 0 0 20px black;
+	padding: 5px;
+	vertical-align: middle;
+	text-align: center;
+
+}
+
+.name-robot {
+	width: 180px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	text-align: center;
+}
+
+.img-robot {
+	width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 0 0 15px black;
+	border: 2px solid gray;
+	border-radius: 10px;
+}
+
+
+
+.robot-program {
+	width: 150px;
+	height: 20px;
+	border-bottom: 5px groove rgba(13%, 29%, 73%, 0.3);
+	border-right: 5px groove rgba(13%, 29%, 73%, 0.3);
+	border-top: 5px ridge rgba(13%, 29%, 73%, 0.3);
+	border-left: 5px ridge rgba(13%, 29%, 73%, 0.3);
+	border-radius: 35px;
+	text-align: center;
+	box-shadow: 0 0 20px black;
+	display: inline-block;
+	padding: 5px;
+}
+
+.robot-programs{
+	vertical-align: bottom;
+	width: 366px;
+	height: 30px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: auto;
+	margin-bottom: 10px;
+}
+
+.robot-characteristic {
+	width: 1000px;
+	min-height: 50px;
+	background-color: rgba(13%, 29%, 73%, 0.3);
+	border-bottom: 5px groove rgba(13%, 29%, 73%, 0.3);
+	border-right: 5px groove rgba(13%, 29%, 73%, 0.3);
+	border-top: 5px ridge rgba(13%, 29%, 73%, 0.3);
+	border-left: 5px ridge rgba(13%, 29%, 73%, 0.3);
+	border-radius: 35px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 20px;
+	box-shadow: 0 0 20px black;
+}
+
+h2 {
+	margin-top: 0px;
+	text-align: center;
+	font-size: 30px;
+}
+
+.log-information {
+	font-size: 40px;
+}
+
+ul {
+	list-style: none;
+}
+
+.robot-achievements {
+	width: 1000px;
+	min-height: 50px;
+	background-color: rgba(13%, 29%, 73%, 0.3);
+	border-bottom: 5px groove rgba(13%, 29%, 73%, 0.3);
+	border-right: 5px groove rgba(13%, 29%, 73%, 0.3);
+	border-top: 5px ridge rgba(13%, 29%, 73%, 0.3);
+	border-left: 5px ridge rgba(13%, 29%, 73%, 0.3);
+	border-radius: 35px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 20px;
+	box-shadow: 0 0 20px black;
+}
+
+
+
+
+.students {
+	width: 100%;
+	margin-top: 20px;
+}
+
+.studentinstudents {
+	width: 200px;
+	height: 285px;
+	background-color: rgba(13%, 29%, 73%, 0.3);
+	border-bottom: 5px groove rgba(13%, 29%, 73%, 0.3);
+	border-right: 5px groove rgba(13%, 29%, 73%, 0.3);
+	border-top: 5px ridge rgba(13%, 29%, 73%, 0.3);
+	border-left: 5px ridge rgba(13%, 29%, 73%, 0.3);
+	margin-right: 27px;
+	margin-left: 27px;
+	margin-top: 20px;
+	display: inline-block;
+	border-radius: 10px;
+	box-shadow: 0 0 20px black;
+	vertical-align: middle;
+}
+
+.name-studentinstudents {
+	width: 180px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5px;
+
+	text-align: center;
+}
+
+.img-studentinstudents {
+	width: 180px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 10px;
+	box-shadow: 0 0 15px black;
+	border-radius: 10px;
+}
+
+h2 {
+	margin-top: 0px;
+}
+
+
+
+
+
+
+
+
+.student-main {
+	margin: 20px;
+	margin-top: 40px;
+	display: flex;
+	flex-direction: row;
+	align-items:: stretch;
+}
+
+.student-information {
+	background-color: rgba(13%, 29%, 73%, 0.3);
+
+	width: 500px;
+
+	border-bottom: 5px groove rgba(13%, 29%, 73%, 0.3);
+	border-right: 5px groove rgba(13%, 29%, 73%, 0.3);
+	border-top: 5px ridge rgba(13%, 29%, 73%, 0.3);
+	border-left: 5px ridge rgba(13%, 29%, 73%, 0.3);
+	border-radius: 35px;
+	box-shadow: 0 0 20px black;
+	margin-right: 0px;
+	padding: 10px;
+
+
+	display: flex;
+	flex-direction: column;
+}
+
+.img-student {
+	width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 0 0 15px black;
+	border: 2px solid gray;
+	border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* классы для страницы регистрации учеников */
+
+
+
+
+.reg-input {
+	min-width: 300px;
+	max-width: 300px;
+	padding: 3px;
+	margin-top: 20px;
+	border-radius: 10px;
+	display: block;
+	background-color: rgba(13%, 29%, 73%, 0.3);
+	border-bottom: 5px groove rgba(13%, 29%, 73%, 0.3);
+	border-right: 5px groove rgba(13%, 29%, 73%, 0.3);
+	border-top: 5px ridge rgba(13%, 29%, 73%, 0.3);
+	border-left: 5px ridge rgba(13%, 29%, 73%, 0.3);
+	box-shadow: 0 0 20px black;
+}
+
+.reg-input:hover {
+	background-color: rgba(13%, 29%, 73%, 0.5);
+	border-bottom: 5px groove rgba(13%, 29%, 73%, 0.5);
+	border-right: 5px groove rgba(13%, 29%, 73%, 0.5);
+	border-top: 5px ridge rgba(13%, 29%, 73%, 0.5);
+	border-left: 5px ridge rgba(13%, 29%, 73%, 0.5);
+}
+
+h3 {
+	text-align: center;
+	font-size: 25px;
+}
+
+h5 {
+	text-align: center;
+	font-size: 20px;
+	margin: 3px;
+}
+
+input {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+div {
+	margin-right: auto;
+}
