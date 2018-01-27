@@ -1,8 +1,5 @@
-@extends('layouts.main')
+@include('layouts.partials.head')
 
-@section('head.auth')
-    Мишки Ми Ми Мишки
-@endsection
-@section('content')
-<h1>Сайт о роботах!</h1>
-@endsection
+
+
+@include('layouts.partials.footer')

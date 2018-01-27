@@ -3,7 +3,7 @@ body {
 	background-color: ghostwhite;
 	font: 15px 'Verdana';
 	color: grey;
-	padding-top: 100px;
+	padding-top: 50px;
 }
 
 .robots > a,
@@ -226,9 +226,9 @@ h2 {
 	min-width: 300px;
 	max-width: 300px;
 	padding: 3px;
-	margin-top: 20px;
 	margin-right: auto;
 	margin-left: auto;
+	margin-top: 0px;
 	border-radius: 10px;
 	display: block;
 	background-color: rgba(13%, 29%, 73%, 0.3);
@@ -563,4 +563,29 @@ input {
 
 div {
 	margin-right: auto;
+}
+
+.account {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.input-text {
+	margin-right: auto;
+	margin-left: auto;
+	width: 320px;
+	margin-bottom: 10px;
+}
+
+.reg-input-student {
+	margin-top: 5px;
+}
+
+.login-pas {
+	text-decoration: none;
+	color: grey;
+}
+
+.login-input {
+	margin-bottom: 10px;
 }
