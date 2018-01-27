@@ -1,4 +1,4 @@
-@include('partials.head')
+@include('layouts.partials.head')
 
 <div class="student-main">
     <div>
@@ -10,4 +10,4 @@
     </div>
 </div>
 
-@include('partials.footer')
+@include('layouts.partials.footer')

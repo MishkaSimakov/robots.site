@@ -16,11 +16,13 @@ class CreateRobotsTable extends Migration
         Schema::create('robots', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('photo_path');
+            $table->string('photo_path')->nullable();
+            $table->string('program_path')->nullable();
+            $table->string('model_path')->nullable();
             $table->text('description');
             $table->text('characteristics');
-            $table->text('achivments');
-            $table->unsignedInteger('student_id')->nullable();
+            $table->text('achivments')->nullable();
+            $table->unsignedInteger('student_id');
             $table->timestamps();
         });
     }

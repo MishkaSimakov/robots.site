@@ -1,17 +1,19 @@
-@include('partials.head')
+@include('layouts.partials.head')
 
 <div class="robots">
 
-    <a href="/new_robot"><div class="robotinrobots">
+  @auth
+    <a href="/robots/create"><div class="robotinrobots">
             <div class="name-robotinrobots">
                 <h2>Добавить робота</h2>
             </div>
         </div></a>
+  @endauth
 
     @foreach ($robots as $robot)
 
     <a href="{{route('robots.show', $robot)}}"><div class="robotinrobots">
-            <img src="{{$robot->photo_path}}" class="img-robotinrobots">
+            <img src="/storage/{{$robot->photo_path}}" class="img-robotinrobots">
             <div class="name-robotinrobots">
                 <h2>{{$robot->name}}</h2>
             </div>
@@ -19,4 +21,4 @@
     @endforeach
 </div>
 
-@include('partials.footer')
+@include('layouts.partials.footer')

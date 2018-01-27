@@ -1,15 +1,15 @@
-@include('partials.head')
+@include('layouts.partials.head')
 
 <div class="robot-main">
     <div>
-        <img class="img-robot" src="{{ $robot->photo_path }}">
+        <img class="img-robot" src="/storage/{{ $robot->photo_path }}">
     </div>
     <div class="robot-information">
         <h2 class="log-information">{{ $robot->name }}</h2>
         <p>{{ nl2br($robot->description) }}</p>
         <div class="robot-programs">
-            <div class="robot-program">Модель робота</div>
-            <div class="robot-program">Программа робота</div>
+            <a class="robot-program" href="/storage/{{ $robot->model_path }}">Модель робота</a>
+            <a class="robot-program" href="/storage/{{ $robot->program_path }}">Программа робота</a>
         </div>
     </div>
 </div>
@@ -24,4 +24,4 @@
     <h3>{{ $robot->achivments }}</h3>
 </div>
 
-@include('partials.footer')
+@include('layouts.partials.footer')

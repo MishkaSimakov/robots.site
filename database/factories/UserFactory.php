@@ -30,6 +30,8 @@ $factory->define(Robot::class, function (Faker $faker) {
         'name' => $faker->name,
         'description' => implode("\r",$faker->paragraphs(3)),
         'photo_path' => $faker->imageUrl(),
+        'program_path' => $faker->imageUrl(),
+        'model_path' => $faker->imageUrl(),
         'characteristics' => $faker->text,
         'achivments' => $faker->text,
         'student_id' => function () {
@@ -42,6 +44,7 @@ $factory->define(Robot::class, function (Faker $faker) {
 $factory->define(Student::class, function (Faker $faker) {
     return [
         'name' => $faker->name,
+        'password' => $faker->password,
         'description' => implode("\r",$faker->paragraphs(3)),
         'photo_path' => $faker->imageUrl()
     ];

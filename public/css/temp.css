@@ -3,11 +3,12 @@ body {
 	background-color: ghostwhite;
 	font: 15px 'Verdana';
 	color: grey;
-	padding-top: 62px;
+	padding-top: 100px;
 }
 
 .robots > a,
-.students > a {
+.students > a,
+.robot-programs > a {
 	color: gray;
 	text-decoration: none;
 }
