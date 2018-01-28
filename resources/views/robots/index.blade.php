@@ -15,7 +15,7 @@
     <a href="{{route('robots.show', $robot)}}"><div class="robotinrobots">
             <img src="/storage/{{$robot->photo_path}}" class="img-robotinrobots">
             <div class="name-robotinrobots">
-                <h2>{{$robot->name}}</h2>
+              <h2><p>{!! nl2br($robot->name) !!}</p></h2>
             </div>
         </div></a>
     @endforeach

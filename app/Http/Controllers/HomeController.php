@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Robot;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -23,6 +25,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $robotsAll = Robot::all();
+
+        foreach ($robotsAll as $robot) {
+            if ($robot->student_id == Auth::id()) {
+                $robots[] = $robot;
+            }
+        }
+
+        return view('home', compact('robots'));
     }
 }

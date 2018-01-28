@@ -1,40 +1,51 @@
 @extends('layouts.main')
 
 @section('content')
-  <form method="POST" action="{{ route('register') }}">
+
+  <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
     {{ csrf_field() }}
 
-    <div class="input-text">
-      <label for="name">Name</label>
-      <input id="name" type="text" name="name" class="reg-input reg-input-student"
+    <div class="input-text margin-top">
+      <input MAXLENGTH="24" placeholder="Имя" id="name" type="text" name="name" class="reg-input reg-input-student"
              value="{{ old('name') }}" required autofocus>
-      @if ($errors->has('name'))
-        <p> Ошибка в имени!!!</p>
-      @endif
     </div>
 
     <div class="input-text">
-      <label for="email">E-Mail Address</label>
-      <input id="email" type="email" name="email" class="reg-input reg-input-student"
+      <input placeholder="E-mail" id="email" type="email" name="email" class="reg-input reg-input-student"
              value="{{ old('email') }}" required>
     </div>
 
+    <h4>Фото аккаунта</h4>
     <div class="input-text">
-      <label for="password">Password</label>
-      <input id="password" type="password" class="reg-input reg-input-student" name="password" required>
+      <input id="photo" type="file" name="photo" class="reg-input reg-input-student" accept="image/*"
+             required>
     </div>
 
     <div class="input-text">
-      <label for="password-confirm">Confirm Password</label>
-      <input id="password-confirm" type="password" class="reg-input reg-input-student"
+      <input MINLENGTH="5" placeholder="Пароль" id="password" type="password" class="reg-input reg-input-student" name="password" required>
+    </div>
+
+    <div class="input-text">
+      <input placeholder="Повторите пароль" id="password-confirm" type="password" class="reg-input reg-input-student"
              name="password_confirmation" required>
     </div>
 
-    <div class="input-text">
+    <div class="input-text margin-bottom">
       <button class="reg-input" type="submit">
-        Register
+        Зарегистрироваться
       </button>
     </div>
 
   </form>
+
+  @if ($errors->any())
+    <div class="alert center">
+      <ul>
+        @foreach ($errors->all() as $error)
+          <li>{{ $error }}</li>
+        @endforeach
+      </ul>
+    </div>
+  @endif
+
 @endsection

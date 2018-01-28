@@ -23,8 +23,8 @@ Route::get('/robots/create', 'RobotsController@create')->name('robots.create');
 Route::get('/robots/{id}', 'RobotsController@show')->name('robots.show');
 
 
-Route::get('/students', 'StudentsController@index')->name('students.index');
-Route::get('/students/{id}', 'StudentsController@show')->name('students.show');
+Route::get('/users', 'UsersController@index')->name('users.index');
+Route::get('/users/{id}', 'UsersController@show')->name('users.show');
 
 
 Auth::routes();

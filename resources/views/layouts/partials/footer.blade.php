@@ -1,3 +1,4 @@
 	<div class="bottom-div"></div>
+  </div>
 </body>
 </html>

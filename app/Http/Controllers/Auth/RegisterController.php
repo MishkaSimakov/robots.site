@@ -5,8 +5,10 @@ namespace App\Http\Controllers\Auth;
 use function abort;
 use App\User;
 use App\Http\Controllers\Controller;
+use function dd;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use function wordwrap;
 
 class RegisterController extends Controller
 {
@@ -38,7 +40,7 @@ class RegisterController extends Controller
     public function __construct()
     {
         $this->middleware('guest');
-        if(!config('robots.registration')) {
+        if (!config('robots.registration')) {
             abort(404);
         }
     }
@@ -46,30 +48,34 @@ class RegisterController extends Controller
     /**
      * Get a validator for an incoming registration request.
      *
-     * @param  array  $data
+     * @param  array $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|string|max:255',
+            'name' => 'required|string|max:24',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
+            'photo' => 'required|mimes:jpeg,bmp,png',
         ]);
     }
 
     /**
      * Create a new user instance after a valid registration.
      *
-     * @param  array  $data
+     * @param  array $data
      * @return \App\User
      */
     protected function create(array $data)
     {
+        $photoPath = $data['photo']->store('students_photos', 'public');
+
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'photo_path' => $photoPath,
         ]);
     }
 }

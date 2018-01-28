@@ -10,11 +10,13 @@
 </head>
 <body>
 
+<div class="flex">
+
 <div class="top-div">
 	<nav class="top-nav">
 		<ul class="main-nav">
 			<li><a class="button" href="/robots">Роботы</a></li>
-			<li><a class="button" href="/students">Ученики</a></li>
+			<li><a class="button" href="/users">Робототехники</a></li>
 		</ul>
 
 		<ul class="account-nav">
@@ -23,7 +25,7 @@
 			<li class="account"><a href="{{ route('register') }}">Регистрация</a></li>
 			@else
 				<li class="dropdown">
-					<a href="#" class="account" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+					<a href="/home" class="account" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
 						{{ Auth::user()->name }} <span class="caret"></span>
 					</a>
 
