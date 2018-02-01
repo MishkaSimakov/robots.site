@@ -1,4 +1,6 @@
-@include('layouts.partials.head')
+@extends('layouts.main')
+
+@section('content')
 
 <div class="robots">
 
@@ -21,4 +23,4 @@
     @endforeach
 </div>
 
-@include('layouts.partials.footer')
+@endsection

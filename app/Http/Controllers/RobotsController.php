@@ -5,12 +5,13 @@ namespace App\Http\Controllers;
 use App\Robot;
 use App\User;
 use function array_key_exists;
-use function back;
 use function compact;
 use function config;
 use function dd;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use function redirect;
+use function route;
 use function view;
 use function wordwrap;
 
@@ -19,21 +20,26 @@ class RobotsController extends Controller
 
     public function __construct()
     {
-//        $this->middleware('auth')->only(['store', 'create']);
+        $this->middleware('auth')->only(['store', 'create']);
     }
     public function index()
     {
-        $robots = Robot::all();
+//        $robot = Robot::where('name', 'СОБУРГ 3М');
 
+        $robots = Robot::all();
         return view('robots.index', compact('robots'));
     }
 
     public function show($id)
     {
-        $robot = Robot::findOrFail($id);
-        $name = User::findOrFail($robot->student_id)['name'];
+//        $robots = Robot::where('name', 'СОБУРГ 3М')->get();
+//        dd($robots);
 
-        return view('robots.show', compact('robot', 'name'));
+        $robot = Robot::findOrFail($id);
+        $student = User::findOrFail($robot->student_id);
+
+
+        return view('robots.show', compact('robot', 'student'));
     }
 
     public function create()
@@ -45,9 +51,9 @@ class RobotsController extends Controller
     {
         $validatedData = $request->validate([
             'name' => 'required|min:5|max:24',
-            'description' => 'required|min:5|max:255',
-            'characteristics' => 'required|min:5|max:255',
-            'achivments' => 'max:255',
+            'description' => 'required|min:5|max:5000',
+            'characteristics' => 'required|min:5|max:5000',
+            'achivments' => 'max:5000',
             'photo' => 'required|mimes:jpeg,bmp,png',
             'program' => '',
             'model' => '',
@@ -73,7 +79,7 @@ class RobotsController extends Controller
         }
         $robot->save();
 
-        return back();
+        return redirect(route('robots.show', $robot));
     }
 
 }

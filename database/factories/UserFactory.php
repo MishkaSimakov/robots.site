@@ -35,17 +35,18 @@ $factory->define(Robot::class, function (Faker $faker) {
         'characteristics' => $faker->text,
         'achivments' => $faker->text,
         'student_id' => function () {
-            return factory(Student::class)->create()->id;
+        return 1;
+//            return factory(Student::class)->create()->id;
         },
 
     ];
 });
 
-$factory->define(Student::class, function (Faker $faker) {
-    return [
-        'name' => $faker->name,
-        'password' => $faker->password,
-        'description' => implode("\r",$faker->paragraphs(3)),
-        'photo_path' => $faker->imageUrl()
-    ];
-});
+//$factory->define(Student::class, function (Faker $faker) {
+//    return [
+//        'name' => $faker->name,
+//        'password' => $faker->password,
+//        'description' => implode("\r",$faker->paragraphs(3)),
+//        'photo_path' => $faker->imageUrl()
+//    ];
+//});

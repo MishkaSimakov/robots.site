@@ -19,6 +19,12 @@
 			<li><a class="button" href="/users">Робототехники</a></li>
 		</ul>
 
+{{--		@if($_SERVER['PATH_INFO'] == '/robots')--}}
+			{{--<form method="GET" action="/robots">--}}
+				{{--<input type="search" name="search" placeholder="поиск">--}}
+			{{--</form>--}}
+		{{--@endif--}}
+
 		<ul class="account-nav">
 			@guest
 			<li class="account"><a href="{{ route('login') }}">Вход</a></li>

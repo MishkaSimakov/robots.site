@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        factory(Robot::class, 10)->create();
+        factory(Robot::class, 100)->create();
 //        factory(Robot::class)->create([
 //            'student_id' => null,
 //        ]);

@@ -1,4 +1,6 @@
-@include('layouts.partials.head')
+@extends('layouts.main')
+
+@section('content')
 
 <div class="robot-main">
     <div>
@@ -6,8 +8,8 @@
     </div>
     <div class="robot-information">
         <h2 class="log-information">{!! nl2br($robot->name) !!}</h2>
-        <h3 class="center">Этого робота сделал {{ $name }}</h3>
-        <p>{!! nl2br($robot->description) !!}</p>
+        <h5 style="float: left; text-align: right"><a class="name"  href="{{ route('users.show', $student['id'])}}">{{ $student['name'] }}</a> <sup>{{ $robot->created_at->toDateString() }}</sup></h5>
+        <h5>{!! nl2br($robot->description) !!}</h5>
         <div class="robot-programs">
             @if($robot->model_path)
             <a class="robot-program" href="/storage/{{ $robot->model_path }}">Модель робота</a>
@@ -31,4 +33,4 @@
 </div>
 @endif
 
-@include('layouts.partials.footer')
+@endsection

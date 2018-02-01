@@ -26,7 +26,6 @@ Route::get('/robots/{id}', 'RobotsController@show')->name('robots.show');
 Route::get('/users', 'UsersController@index')->name('users.index');
 Route::get('/users/{id}', 'UsersController@show')->name('users.show');
 
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

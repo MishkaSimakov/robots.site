@@ -1,4 +1,6 @@
-@include('layouts.partials.head')
+@extends('layouts.main')
+
+@section('content')
 
 <div class="students">
 @foreach ($users as $user)
@@ -9,4 +11,4 @@
 @endforeach
 </div>
 
-@include('layouts.partials.footer')
+@endsection

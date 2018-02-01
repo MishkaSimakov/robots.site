@@ -1,4 +1,6 @@
-@include('layouts.partials.head')
+@extends('layouts.main')
+
+@section('content')
 
 <h1 class="center margin-top">Вы зарегистрировались!</h1>
 
@@ -17,4 +19,4 @@
   </div>
 @endif
 
-@include('layouts.partials.footer')
+@endsection

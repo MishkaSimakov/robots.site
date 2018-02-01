@@ -18,7 +18,6 @@ class UsersController extends Controller
     public function show($id)
     {
         $user = User::findOrFail($id);
-        $user->name = wordwrap($user->name, 8, "\n",1);
 //
 
         $robots = Robot::all();

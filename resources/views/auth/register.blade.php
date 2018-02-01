@@ -6,7 +6,7 @@
     {{ csrf_field() }}
 
     <div class="input-text margin-top">
-      <input MAXLENGTH="24" placeholder="Имя" id="name" type="text" name="name" class="reg-input reg-input-student"
+      <input MAXLENGTH="24" placeholder="Имя и фамилия" id="name" type="text" name="name" class="reg-input reg-input-student"
              value="{{ old('name') }}" required autofocus>
     </div>
 
