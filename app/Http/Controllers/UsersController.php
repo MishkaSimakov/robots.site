@@ -18,17 +18,8 @@ class UsersController extends Controller
     public function show($id)
     {
         $user = User::findOrFail($id);
-//
 
-        $robots = Robot::all();
-
-        foreach ($robots as $robot) {
-            if ($robot->student_id == $id) {
-                 $hisRobots[] = $robot;
-            }
-        }
-
-        return view('users.show', compact('user', 'hisRobots'));
+        return view('users.show', compact('user'));
     }
 
 }

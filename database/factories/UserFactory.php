@@ -2,6 +2,7 @@
 
 use App\Robot;
 use App\Student;
+use App\User;
 use Faker\Generator as Faker;
 
 /*
@@ -18,6 +19,7 @@ use Faker\Generator as Faker;
 $factory->define(App\User::class, function (Faker $faker) {
     return [
         'name' => $faker->name,
+        'photo_path' => $faker->imageUrl(),
         'email' => $faker->unique()->safeEmail,
         'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
         'remember_token' => str_random(10),
@@ -34,11 +36,6 @@ $factory->define(Robot::class, function (Faker $faker) {
         'model_path' => $faker->imageUrl(),
         'characteristics' => $faker->text,
         'achivments' => $faker->text,
-        'student_id' => function () {
-        return 1;
-//            return factory(Student::class)->create()->id;
-        },
-
     ];
 });
 

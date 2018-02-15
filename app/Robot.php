@@ -6,5 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Robot extends Model
 {
-    protected $fillable = ['name', 'description', 'characteristics', 'student_id', 'achivments'];
+    protected $fillable = ['name', 'description', 'characteristics', 'achivments'];
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class);
+    }
 }

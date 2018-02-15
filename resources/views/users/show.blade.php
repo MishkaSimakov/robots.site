@@ -12,15 +12,15 @@
     </div>
 </div>
 
-@if(isset($hisRobots))
+@if($user->robots)
     <h2 class="center">Роботы этого робототехника</h2>
 
     <div class="robots">
-    @foreach($hisRobots as $hisRobot)
-        <a href="{{route('robots.show', $hisRobot)}}"><div class="robotinrobots">
-                <img src="/storage/{{$hisRobot->photo_path}}" class="img-robotinrobots">
+    @foreach($user->robots as $robot)
+        <a href="{{route('robots.show', $robot)}}"><div class="robotinrobots">
+                <img src="/storage/{{$robot->photo_path}}" class="img-robotinrobots">
                 <div class="name-robotinrobots">
-                    <h2>{!! nl2br($hisRobot->name) !!}</h2>
+                    <h2>{!! nl2br($robot->name) !!}</h2>
                 </div>
             </div></a>
     @endforeach

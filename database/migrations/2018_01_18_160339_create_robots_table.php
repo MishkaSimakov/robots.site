@@ -22,7 +22,6 @@ class CreateRobotsTable extends Migration
             $table->text('description');
             $table->text('characteristics');
             $table->text('achivments')->nullable();
-            $table->unsignedInteger('student_id');
             $table->timestamps();
         });
     }
